@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DataTableComponent } from './data-table/data-table.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 const storeRoutes: Routes = [{
   path: 'dataTable', component: DataTableComponent
 }];
@@ -13,6 +13,7 @@ const storeRoutes: Routes = [{
 @NgModule({
   declarations: [DashboardComponent, DataTableComponent, RegisterFormComponent],
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     MatTabsModule, 
     RouterModule.forChild(storeRoutes)

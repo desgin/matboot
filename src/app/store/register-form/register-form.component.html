@@ -1,1 +1,40 @@
-<p>register-form works!</p>
+<h1> Animal Sheter volunteer form</h1>
+<form [formGroup]="volunteerForm" (ngSubmit)="onSubmit()">
+<h2>Personal Information</h2>
+<label>
+    First Name:
+    <input type="text" formControlName="name" placeholder="required">
+</label>
+<label>
+    Phone Number: 
+    <input type="text" formControlName="phoneNumber" placeholder="required">
+</label>
+<label>Select Preferred Locations:</label>
+<select formControlName="preferredLocation" (change)="selectedLocation($event)">
+    <option *ngFor="let loc of locations" [ngValue]="loc"> {{loc}}</option>
+</select>
+<h2>Please select what animals you're comfortable working with, if any:</h2>
+<div formGroupName="animals"class="grouping">
+<label>Dogs
+    <input formControlName="dogs" type="checkbox">
+</label>
+<label>Cats
+    <input formControlName="cats" type="checkbox">
+</label>
+<label>Reptiles
+    <input formControlName="reptiles" type="checkbox">
+</label>
+</div>
+<h2>References</h2>
+<div formArrayName="references" 
+*ngFor="let ref of references.controls; let i= index" 
+class="grouping">
+    <label>
+        Reference Email: 
+        <input [formControlName]="i" type="text" placeholder="optional">
+        <button type="button" (click)="removeEmail(i)" id="remove_email">X</button>
+    </label>
+</div>
+<button type="button" (click)="addEmail()">Add Another Reference</button>
+<button id="apply_button_id">Apply</button>
+</form>
