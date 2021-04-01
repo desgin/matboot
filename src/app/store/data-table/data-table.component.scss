@@ -1,3 +1,18 @@
-table {
-    width: 100%
+
+table.mat-table {
+    border-spacing: 0;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 24px;
+  }
+
+  th.mat-header-cell {
+      padding: 24px;
+  }
+
+  table {
+      width: 100%;
+  }
