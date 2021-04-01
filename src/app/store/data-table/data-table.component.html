@@ -1,1 +1,23 @@
-<p>data-table works!</p>
+<div class="mat-app-background">
+    <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef>Position</th>
+            <td mat-call *matCellDef="let element">{{element.position}}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-call *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef>Weight</th>
+            <td mat-call *matCellDef="let element">{{element.weight}}</td>
+        </ng-container>
+        <ng-container matColumnDef="identification">
+            <th mat-header-cell *matHeaderCellDef>Identification</th>
+            <td mat-call *matCellDef="let element">{{element.identification}}</td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns:displayedColumns;"></tr>
+    </table>
+</div>

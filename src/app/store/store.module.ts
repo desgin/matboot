@@ -1,3 +1,4 @@
+import { MatTableModule } from '@angular/material/table';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,6 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-
 
 const storeRoutes: Routes = [{
   path: 'dataTable', component: DataTableComponent
@@ -20,6 +20,7 @@ const storeRoutes: Routes = [{
     CommonModule,
     MatTabsModule, 
     MatButtonModule,
+    MatTableModule,
     RouterModule.forChild(storeRoutes)
   ]
 })
