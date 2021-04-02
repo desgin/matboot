@@ -13,10 +13,10 @@ const routes: Routes = [
     path: 'dashboard', component: DashboardComponent
   },
   {
-     path: '', redirectTo: '/homePage', pathMatch: 'full' 
+    path: '', redirectTo: '/homePage', pathMatch: 'full' 
   },
   {
-    path: "**", component: PageNotFoundComponent
+    path: '**', component: PageNotFoundComponent
   },
 ];
 

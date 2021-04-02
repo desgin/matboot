@@ -1,4 +1,5 @@
-<h1> Animal Shelter volunteer form</h1>
+<div class="register-form">
+    <h1> Animal Shelter volunteer form</h1>
 <form [formGroup]="volunteerForm" (ngSubmit)="onSubmit()">
 <h2>Personal Information</h2>
 <label>
@@ -38,3 +39,4 @@ class="grouping">
 <button type="button" (click)="addEmail()">Add Another Reference</button>
 <button id="apply_button_id">Apply</button>
 </form>
+</div>
