@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {MatButtonModule} from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { StoreModule } from './store/store.module';
+import { PrivacyStatementComponent } from './home-page/privacy-statement/privacy-statement.component';
 
 
 
@@ -19,6 +20,7 @@ import { StoreModule } from './store/store.module';
     AppComponent,
     HomePageComponent,
     PageNotFoundComponent,
+    PrivacyStatementComponent,
   ],
   imports: [
     BrowserModule,
