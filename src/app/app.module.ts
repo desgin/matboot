@@ -9,7 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import {MatButtonModule} from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatTabsModule, MAT_TABS_CONFIG } from '@angular/material/tabs';
 import { StoreModule } from './store/store.module';
 import { PrivacyStatementComponent } from './home-page/privacy-statement/privacy-statement.component';
 
@@ -31,7 +31,9 @@ import { PrivacyStatementComponent } from './home-page/privacy-statement/privacy
     BrowserAnimationsModule,
     StoreModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_TABS_CONFIG, useValue: { animationDuration: '0ms' } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
