@@ -4,3 +4,8 @@
     min-width: auto;
     float: right;
   }
+
+ ::ng-deep .mat-focus-indicator {
+    background-color: whitesmoke;
+  }
+  
