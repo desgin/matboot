@@ -4,17 +4,17 @@ table.mat-table {
 }
 
 table {
-    border: 1px solid black;
+    border: 0.063rem solid black;
 }
 
 th, td {
-    border-bottom: 1px solid black;
+    border-bottom: 0.063rem solid black;
     border-collapse: collapse;
-    padding: 24px;
+    padding: 1.5rem;
   }
 
   th.mat-header-cell {
-      padding: 24px;
+      padding: 1.5rem;
   }
 
   table {
