@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'dashboard', component: DashboardComponent
   },
   {
-    path: 'privacyStatement', component: PrivacyStatementComponent
+    path: 'privacystatement', component: PrivacyStatementComponent
   },
   {
     path: '', redirectTo: '/homePage', pathMatch: 'full' 
