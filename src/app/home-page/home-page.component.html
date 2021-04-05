@@ -1,15 +1,37 @@
 
-    <div>
-      <button class="example-button-row"
-      mat-raised-button 
-      color="primary" 
-      center 
-      [routerLink]="['/dashboard']">Lets Get Started</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 intro">
+          <h3> There are 12 template columns available per row, 
+            allowing you to create different combinations of elements 
+            that span any number of columns. Column classes indicate the number of 
+            template columns to span (e.g., col-4 spans four). widths are set in percentages 
+            so you always have the same relative sizing.  There are 12 template columns available per row, 
+            allowing you to create different combinations of elements 
+            that span any number of columns. Column classes indicate the number of 
+            template columns to span (e.g., col-4 spans four). widths are set in percentages 
+            so you always have the same relative sizing. </h3>
+        </div>
+        <div class="col-md-2">
+          <img/>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <button class="example-button-row"
+          mat-raised-button 
+          color="basic" 
+          center 
+          [routerLink]="['/dashboard']">Lets Get Started</button>
+          <button class="example-button-row"
+         mat-raised-button 
+         color="warn" 
+         center 
+         (click)= "onClick()"
+         [routerLink]="['/privacyStatement']" 
+        routerLinkActive="active">Privacy Statement</button>
+        </div>
+      </div>
 
-    <button class="example-button-row"
-      mat-raised-button 
-      color="primary" 
-      center 
-      (click)= "onClick()"
-      [routerLink]="['/privacyStatement']" routerLinkActive="active">Privacy Statement</button>
     </div>
