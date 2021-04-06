@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PrivacyStatementComponent } from './privacy-statement/privacy-statement.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-home-page',
@@ -8,12 +11,12 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
   onClick(): void {
-    this.router.navigate(['/privacystatement']);
+    this.modalService.open(PrivacyStatementComponent);
   }
 }

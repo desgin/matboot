@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-privacy-statement',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./privacy-statement.component.scss']
 })
 export class PrivacyStatementComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  my_modal_title = "";
+  my_modal_content = "";
+  
+  constructor(public activeModal: NgbActiveModal) { 
   }
 
+ 
+  ngOnInit(): void {
+  }
 }
