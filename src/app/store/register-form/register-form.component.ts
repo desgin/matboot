@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register-form',
@@ -19,9 +19,9 @@ export class RegisterFormComponent implements OnInit {
 
   initalizeForm(): void {
     this.volunteerForm = this.fb.group({
-      name: '',
-      phoneNumber: '',
-      preferredLocation: '',
+      name: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
+      preferredLocation: ['', Validators.required],
       animals: this.fb.group({
         dogs: false,
         cats: false,

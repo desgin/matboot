@@ -33,13 +33,14 @@
         chats, profile pages, blogs, and other services (including social media services) are publicly available 
         and will be seen by other visitors to this Site. You should consider this when deciding to disclose any 
         personal data or any other information on this Site.</p>
-        <div formGroupName="statement">
+        <div formGroupName="statementForm">
             <label>
-                <input formControlName="checkType" type="checkbox"> I agree, with the above statement mentioned. 
+                <input formControlName="agreeBox" type="checkbox"> I agree, with the above statement mentioned. 
             </label>
             </div>
+            <div *ngIf="errorMessage" class="error-message"> Please click on the check box to agree with statement</div>
   </div>
   <div class="modal-footer">
-    <button type="button" ngbAutofocus class="btn btn-danger" (click)="activeModal.close(' OK click')"> Ok</button>
+    <button type="button" ngbAutofocus class="btn btn-danger" (click)="onSubmit()"> Ok</button>
     <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Close</button>
   </div>
