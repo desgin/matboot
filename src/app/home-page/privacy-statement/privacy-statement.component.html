@@ -1,12 +1,45 @@
 <div class="modal-header">
-    <h4 class="modal-title">{{my_modal_title}}</h4>
-    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <h4 class="modal-title">Privacy Statement</h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <p> {{my_modal_content}}</p>
+    <p> We collect or obtain data relating to you in a variety of ways, 
+        as described below. Such data may include personal data, i.e., information that alone or in 
+        combination with other information identifies you as an individual or can be reasonably linked to your identity. 
+
+        Data You Provide: When you submit questions, request information, 
+        or give us feedback via this Site, we may ask you for data, like your name, postal address, 
+        telephone number, and email address so we can respond or follow up. We may also ask you to provide 
+        other data relevant to your question, request, or feedback, such as your geographical location, industry, and 
+        preferred contact method.
+        
+        You may also make requests through this Site to exercise your individual rights under 
+        applicable privacy laws. We will collect and maintain data related to such requests in order to respond 
+        to you and for our audit and legal compliance purposes.
+        
+        We generally do not seek data that may be considered “special” or “sensitive” personal data 
+        (e.g., government-issued identification numbers or information related to an individual’s racial 
+        or ethnic origin, political opinions, religious or other beliefs, health, criminal background, or trade 
+        union membership) from visitors of this Site, and we ask that you do not provide such data. 
+        If we specifically require “special” or “sensitive” personal data in connection with one or more of the 
+        uses described below, we will request your consent to use the data in accordance with this Privacy Statement 
+        and/or in the ways described at the point where you were asked to disclose the data. If you voluntarily share 
+        with us or post/upload  any “special” or “sensitive” personal data to this Site for any other reason, you 
+        consent that we may use such data in accordance with applicable law and this Privacy Statement.
+        
+        Please note that any information or materials you post or disclose on this Site via message boards, 
+        chats, profile pages, blogs, and other services (including social media services) are publicly available 
+        and will be seen by other visitors to this Site. You should consider this when deciding to disclose any 
+        personal data or any other information on this Site.</p>
+        <div formGroupName="statement">
+            <label>
+                <input formControlName="checkType" type="checkbox"> I agree, with the above statement mentioned. 
+            </label>
+            </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button type="button" ngbAutofocus class="btn btn-danger" (click)="activeModal.close(' OK click')"> Ok</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Close</button>
   </div>

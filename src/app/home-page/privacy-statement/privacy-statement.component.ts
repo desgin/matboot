@@ -8,9 +8,6 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PrivacyStatementComponent implements OnInit {
   
-  my_modal_title = "";
-  my_modal_content = "";
-  
   constructor(public activeModal: NgbActiveModal) { 
   }
 
