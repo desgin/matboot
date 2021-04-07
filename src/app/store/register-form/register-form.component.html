@@ -1,42 +1,69 @@
-<div class="register-form">
-    <h1> Animal Shelter volunteer form</h1>
-<form [formGroup]="volunteerForm" (ngSubmit)="onSubmit()">
-<h2>Personal Information</h2>
-<label>
-    First Name:
-    <input type="text" formControlName="name" placeholder="required">
-</label>
-<label>
-    Phone Number: 
-    <input type="text" formControlName="phoneNumber" placeholder="required">
-</label>
-<label>Select Preferred Locations:</label>
-<select formControlName="preferredLocation" (change)="selectedLocation($event)">
-    <option *ngFor="let loc of locations" [ngValue]="loc"> {{loc}}</option>
-</select>
-<h2>Please select what animals you're comfortable working with, if any:</h2>
-<div formGroupName="animals"class="grouping">
-<label>Dogs
-    <input formControlName="dogs" type="checkbox">
-</label>
-<label>Cats
-    <input formControlName="cats" type="checkbox">
-</label>
-<label>Reptiles
-    <input formControlName="reptiles" type="checkbox">
-</label>
-</div>
-<h2>References</h2>
-<div formArrayName="references" 
-*ngFor="let ref of references.controls; let i= index" 
-class="grouping">
-    <label>
-        Reference Email: 
-        <input [formControlName]="i" type="text" placeholder="optional">
-        <button type="button" (click)="removeEmail(i)" id="remove_email">X</button>
-    </label>
-</div>
-<button type="button" (click)="addEmail()">Add Another Reference</button>
-<button id="apply_button_id">Apply</button>
-</form>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="register-form">
+                <h1> Animal Shelter volunteer form</h1>
+            <form [formGroup]="volunteerForm" (ngSubmit)="onSubmit()">
+            <h2>Personal Information</h2>
+            <label>
+                First Name:
+                <input type="text" formControlName="name" placeholder="required">
+                <span *ngIf="!volunteerForm.get('name').valid && volunteerForm.get('name').touched">
+                    Please enter a valid user Name !
+                </span>
+            </label>
+            <label>
+                Phone Number: 
+                <input type="text" formControlName="phoneNumber" placeholder="required">
+                <span *ngIf="!volunteerForm.get('phoneNumber').valid && volunteerForm.get('phoneNumber').touched">
+                    Please enter a valid  phoneNumber !
+                </span>
+            </label>
+            <label>Select Preferred Locations:</label> 
+            <span *ngIf="!volunteerForm.get('preferredLocation').valid && volunteerForm.get('preferredLocation').touched">
+                Please select a preferred location
+            </span>
+            <select formControlName="preferredLocation" (change)="selectedLocation($event)">
+                <option *ngFor="let loc of locations" [ngValue]="loc"> {{loc}}</option>
+            </select>
+            <h2>Please select what animals you're comfortable working with, if any:</h2>
+            <div formGroupName="animals"class="grouping">
+            <label>Dogs
+                <input formControlName="dogs" type="checkbox">
+            </label>
+            <label>Cats
+                <input formControlName="cats" type="checkbox">
+            </label>
+            <label>Reptiles
+                <input formControlName="reptiles" type="checkbox">
+            </label>
+            </div>
+            <h2>References</h2>
+            <div formArrayName="references" 
+            *ngFor="let ref of references.controls; let i= index" 
+            class="grouping">
+                <label>
+                    Reference Email: 
+                    <input [formControlName]="i" type="text" placeholder="optional">
+                    <button type="button" (click)="removeEmail(i)" id="remove_email">X</button>
+                </label>
+            </div>
+            <button type="button" (click)="addEmail()">Add Another Reference</button>
+            <button id="apply_button_id">Apply</button>
+            <span *ngIf="!volunteerForm.valid && volunteerForm.touched">
+                Please fill the form details
+            </span>
+            </form>
+            </div>
+        </div>
+        <div class="col-md-4 register-form">
+            Display the output data of register form
+            <h1> Print out data </h1>
+            <div>
+                <p></p>
+            </div>
+        </div>
+    </div>
 </div>
