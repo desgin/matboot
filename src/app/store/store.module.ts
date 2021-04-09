@@ -8,14 +8,15 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { LearningComponent } from './learning/learning.component'
 
 const storeRoutes: Routes = [{
   path: 'dataTable', component: DataTableComponent
 }];
 
 @NgModule({
-  declarations: [DashboardComponent, DataTableComponent, RegisterFormComponent],
+  declarations: [DashboardComponent, DataTableComponent, RegisterFormComponent, LearningComponent],
   imports: [
     ReactiveFormsModule,
     CommonModule,

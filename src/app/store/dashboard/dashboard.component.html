@@ -4,9 +4,10 @@
       center 
       [routerLink]="['/homePage']">Home</button>
 <mat-tab-group>
-    <mat-tab label="Fourth"> Content 4 </mat-tab>
+    <mat-tab label="Learning"> <app-learning></app-learning></mat-tab>
     <mat-tab label="Inventory"> <app-data-table></app-data-table>  </mat-tab>
     <mat-tab label="Volunter Form" > 
     <app-register-form></app-register-form>  
     </mat-tab>
+    <mat-tab label="Fourth"> Content 4 </mat-tab>
   </mat-tab-group>
