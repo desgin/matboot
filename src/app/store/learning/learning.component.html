@@ -1,1 +1,23 @@
-<p>learning works!</p>
+<h1 [ngStyle]="{'color': 'white'}">Maniuplating the data by using pipes and formats</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 intro">
+            <h2>Upper Case Pipe</h2>
+            <div> {{value | uppercase}}</div>
+            <h2>Lower Case Pipe</h2>
+            <div> {{value | lowercase}}</div>
+        </div>
+
+        <div class="col-md-4 intro">
+            <h2>Currency Pipe</h2>
+            <div>{{a |currency}}</div>
+            <div>{{a |currency: 'CAD'}}</div>
+            <div>{{a |currency: 'AUD'}}</div>
+            <div>{{a |currency: 'CAD': 'code'}}</div>
+            <div>{{a |currency: 'CAD': 'symbol'}}</div>
+            <div>{{b |currency: 'CAD': 'symbol': '4.2-2'}}</div>
+            <div>{{b |currency: 'CAD': 'symbol-narrow': '4.2-2'}}</div>
+            <div>{{b |currency:'CAD':'symbol':'4.2-2':'fr'}}</div>
+        </div>
+    </div>
+</div>

@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearningComponent implements OnInit {
 
+  value: string;
+  a: number;
+  b: number;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.value = "Learn Date";
+    this.a = 0.259;
+    this.b = 1.3495;
   }
 
 }
