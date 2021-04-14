@@ -17,7 +17,62 @@
             <div>{{a |currency: 'CAD': 'symbol'}}</div>
             <div>{{b |currency: 'CAD': 'symbol': '4.2-2'}}</div>
             <div>{{b |currency: 'CAD': 'symbol-narrow': '4.2-2'}}</div>
-            <div>{{b |currency:'CAD':'symbol':'4.2-2':'fr'}}</div>
+        </div>
+
+        <div class="col-md-4 intro">
+            <h2>Date Pipe</h2>
+            <div>{{today | date}}</div>
+            <div>{{today | date: 'short'}}</div>
+            <div>{{today | date: 'medium'}}</div>
+            <div>{{today | date: 'long'}}</div>
+            <div>{{today | date: 'full'}}</div>
+            <div>{{today | date: 'shortDate'}}</div>
+            <div>{{today | date: 'mediumDate'}}</div>
+            <div>{{today | date: 'longDate'}}</div>
+            <div>{{today | date: 'fullDate'}}</div>
+            <div>{{today | date: 'shortTime'}}</div>
+            <div>{{today | date: 'mediumTime'}}</div>
+            <div>{{today | date: 'longTime'}}</div>
+            <div>{{today | date: 'fullTime'}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 intro">
+            <h2>Decimal Pipe</h2>
+            <div>{{pi | number}}</div>
+            <div>{{pi | number:'4.1-5'}}</div>
+            <div>{{pi | number:'3.1-2'}}</div>
+        </div>
+        <div class="col-md-4 intro">
+            <h2>Percent Pipe</h2>
+            <div>{{pi | percent}}</div>
+            <div>{{pi | percent:'4.1-5'}}</div>
+            <div>{{pi | percent:'3.1-3'}}</div>
+        </div>
+        <div class="col-md-4 intro">
+            <h2>Async Pipe</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 intro">
+            <h2>I18n Plural Pipe</h2>
+        </div>
+        <div class="col-md-4 intro">
+            <h2>Key Value pipe</h2>
+        </div>
+        <div class="col-md-4 intro">
+            <h2>Slice pipe</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 intro">
+            <h2>I18n Select Pipe</h2>
+        </div>
+        <div class="col-md-4 intro">
+            <h2>Title Case pipe</h2>
+        </div>
+        <div class="col-md-4 intro">
+            <h2>Chaining multiple pipe</h2>
         </div>
     </div>
 </div>
